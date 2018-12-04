@@ -2,16 +2,15 @@
 #define TADMATRIZVOOS_H_INCLUDED
 
 #include "TADITEMMATRIZ.h"
-#include "LISTAVIDS.h"
 
 typedef struct{
-    ItemMatriz **Matriz;//NotaÁ„o para utilizar a alocaÁ„o din‚mica de matrizes (ponteiro para ponteiro)
+    ItemMatriz **Matriz;//Nota√ß√£o para utilizar a aloca√ß√£o din√¢mica de matrizes (ponteiro para ponteiro)
     char Data[100];
     int NumTotVoos;
     char HAtualizacao[6];
 }TipoMatriz;
 
-//CabeÁalho das funÁıes que ser„o utilizadas
+//Cabe√ßalho das fun√ß√µes que ser√£o utilizadas
 void InicializaMatrizDinamica(TipoMatriz *MatrizVoos);
 void InicializaMatriz(TipoMatriz *MatrizVoos);
 void InserirVoo(TipoMatriz *MatrizVoos, TipoVoo Voo);
