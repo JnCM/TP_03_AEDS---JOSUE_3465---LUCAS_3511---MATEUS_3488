@@ -112,13 +112,12 @@ void geraVoos(TipoVoo *Voo){//Função para gerar voos aleatoriamente
 /*As próximas funções contém os 6 algoritmos de ordenação, bubble, selection, insertion, shell, quick e heap, respectivamente
 Comp e Mov são variáveis usadas em todos os algoritmos, destinadas a serem contadores para comparações e movimentações*/
 void bubble_sort(TipoVetor *Vetor, int TAM){
-  int i, j, troca, Comp = 0, Mov = 0;
+  int i, j, Comp = 0, Mov = 0;
   clock_t TempFinal, TempInicial;
   double Tempo_ms;
   TipoVetor Aux;
   TempInicial = clock();
   for(i=0; i<TAM-1; i++){
-    troca = 0;
     for(j=1; j<TAM-i; j++){
       Comp ++;
       if(Vetor[j].ID < Vetor[j-1].ID){
@@ -126,12 +125,8 @@ void bubble_sort(TipoVetor *Vetor, int TAM){
         Vetor[j] = Vetor[j-1];
         Vetor[j-1] = Aux;
         Mov += 3;
-        troca = 1;
       }
     }
-    if(troca = 0){
-      break;
-  }
   }
   TempFinal = clock();
   Tempo_ms = (TempFinal - TempInicial) * 1000.0 / CLOCKS_PER_SEC;
