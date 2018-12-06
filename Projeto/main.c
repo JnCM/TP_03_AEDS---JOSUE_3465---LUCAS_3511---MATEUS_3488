@@ -94,7 +94,9 @@ int main(){
                   geraVoos(&Voo);//Gerando os Voos aleatoriamente
                   InserirVoo(&Vetor[i].Matriz, Voo);//Inserindo o voo na matriz correspondente à posição do vetor
                 }
-                Vetor2[i] = Vetor[i];//Atribuíndo ao segundo vetor os dados do vetor principal
+              }
+              for(i=0; i<TAM; i++){
+                Vetor2[i] = Vetor[i];//Desordena o vetor auxiliar para ser usado novamente
               }
               do{//Começo da estrutura de repetição para o usuário ordenar o mesmo vetor com algoritmos diferentes
                 printf("******************************************************************************\n");
@@ -288,7 +290,9 @@ int main(){
                   SetVID(&Voo, rand()%40000);//VID do Voo
                   InserirVoo(&Vetor[VetorPos[i]].Matriz, Voo);//Inserindo o voo na matriz correspondente à posição do vetor
                 }
-                Vetor2[i] = Vetor[i];//Atribuíndo ao segundo vetor os dados do vetor principal
+              }
+              for(i=0; i<TAM; i++){
+                Vetor2[i] = Vetor[i];//Desordena o vetor auxiliar para ser usado novamente
               }
               fclose(Arquivo);//Fechamento do arquivo
               do{//Começo da estrutura de repetição para o usuário ordenar o mesmo vetor com algoritmos diferentes
