@@ -85,7 +85,7 @@ int main(){
                 TAM_div = TAM;//Atribuição para pegar 100% das matrizes
                 In = 100;//Quantidade de voos para esse cenário
             }
-            if(Opcao_Cenario != 0){
+            if(Opcao_Cenario != 0){//Se o usuário não escolher sair do programa
               Vetor = (TipoVetor *)malloc(TAM*sizeof(TipoVetor));//Criando o vetor dinamicamente alocado
               Vetor2 = (TipoVetor *)malloc(TAM*sizeof(TipoVetor));//Criando o vetor auxiliar dinamicamente alocado
               InicializaVetor(Vetor, TAM);//Inicializando o Vetor de matrizes
@@ -221,7 +221,7 @@ int main(){
                 TAM_div = TAM;//Atribuição para pegar 100% das matrizes
                 In = 100;//Quantidade de voos para esse cenário
             }
-            if(NomeArq[0] != '0'){
+            if(NomeArq[0] != '0'){//Se o usuário não escolher sair do programa
               Arquivo = fopen(NomeArq, "r");//Abertura do arquivo desejado
               int VetorPos[TAM_div];//Declaração do vetor de posições que terão matrizes preenchidas
               for(i=0; i<TAM_div; i++){
