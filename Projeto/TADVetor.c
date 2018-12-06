@@ -154,12 +154,10 @@ void selection_sort(TipoVetor *num, int tam) {
          min = j;
        }
      }
-     if (num[i].ID != num[min].ID) {
-       aux = num[i];
-       num[i] = num[min];
-       num[min] = aux;
-       Mov += 3;
-     }
+     aux = num[i];
+     num[i] = num[min];
+     num[min] = aux;
+     Mov += 3;
   }
   TempFinal = clock();
   Tempo_ms = (TempFinal - TempInicial) * 1000.0 / CLOCKS_PER_SEC;
